@@ -18,13 +18,13 @@ $ steroids generate ng-resource <resourceName>
  
 which creates an AngularJS boilerplate for you.
 
-However, if you now run '$ steroids connect' and 'simulator', instead of the sample AngularJS app residing in 'app/' folder, you will see the 'www/index.html' file. Localhost is to help here. Your WebViews will be served by the device's web server while using AngularJS. Open 'config/application.coffee' and change the app's intial location to point to your resource's index view:
+However, if you now run '$ steroids connect', instead of the sample AngularJS app residing in 'app/' folder, you will see the 'www/index.html' file. Localhost is to help here. Your WebViews will be served by the device's web server while using AngularJS. Open 'config/application.coffee' and change the app's intial location to point to your resource's index view:
 
 {% highlight coffeescript %}
 steroids.config.location = "http://localhost/views/<resourceName>/index.html"
 {% endhighlight %}
 
-Now, after '$ steroids connect' and 'simulator' or hitting enter if already connected, you can see the sample AngularJS app, on top of which you can build your own AngularJS magic.
+Now, after '$ steroids connect' or pressing enter if already connected, you can see the sample AngularJS app, on top of which you can build your own AngularJS magic.
 
 Inside the 'app/' folder, 'app/controllers/ is the place for your AngularJS controllers and 'app/models/ the place for your AngularJS services. For the views, declare your dependencies in 'app/views/layouts/<resourceName>.html. The partial templates that extend this layout template go to the app/views/<resourceName>/ folder. 
 
